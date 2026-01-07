@@ -12,6 +12,12 @@ export default function Hero() {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-warm-200/30 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-cream-300/40 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+
+        {/* Floating cake jar emojis */}
+        <div className="absolute top-1/4 left-[15%] text-6xl opacity-10 animate-pulse">🎂</div>
+        <div className="absolute top-1/3 right-[12%] text-5xl opacity-10 animate-pulse" style={{ animationDelay: '0.5s' }}>🍰</div>
+        <div className="absolute bottom-1/4 left-[20%] text-7xl opacity-10 animate-pulse" style={{ animationDelay: '1.5s' }}>🍓</div>
+        <div className="absolute bottom-1/3 right-[18%] text-6xl opacity-10 animate-pulse" style={{ animationDelay: '2s' }}>🎉</div>
       </div>
 
       <div className="container-custom relative z-10">

@@ -1,8 +1,61 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import { galleryItems } from '@/lib/data';
+
+// Beautiful gradient placeholders matching the actual product colors
+const gradientStyles: Record<string, string> = {
+  '1': 'bg-gradient-to-br from-red-200 via-pink-100 to-red-300', // Strawberry red velvet
+  '2': 'bg-gradient-to-br from-yellow-100 via-green-200 to-pink-200', // Variety collection
+  '3': 'bg-gradient-to-br from-amber-200 via-brown-300 to-stone-400', // Chocolate cookie
+  '4': 'bg-gradient-to-br from-pink-200 via-yellow-100 to-red-200', // Strawberry sprinkle
+  '5': 'bg-gradient-to-br from-green-200 via-emerald-300 to-green-100', // Mint shamrock
+};
+
+const decorativeElements: Record<string, JSX.Element> = {
+  '1': (
+    <div className="absolute inset-0 flex items-center justify-center">
+      <div className="text-center">
+        <div className="text-8xl mb-2">🍓</div>
+        <div className="text-6xl">🎂</div>
+      </div>
+    </div>
+  ),
+  '2': (
+    <div className="absolute inset-0 flex items-center justify-center">
+      <div className="grid grid-cols-2 gap-4 text-6xl">
+        <div>🍰</div>
+        <div>🎂</div>
+        <div>🧁</div>
+        <div>🍪</div>
+      </div>
+    </div>
+  ),
+  '3': (
+    <div className="absolute inset-0 flex items-center justify-center">
+      <div className="text-center">
+        <div className="text-8xl mb-2">🍫</div>
+        <div className="text-6xl">🍪</div>
+      </div>
+    </div>
+  ),
+  '4': (
+    <div className="absolute inset-0 flex items-center justify-center">
+      <div className="text-center">
+        <div className="text-8xl mb-2">🍓</div>
+        <div className="text-6xl">🎉</div>
+      </div>
+    </div>
+  ),
+  '5': (
+    <div className="absolute inset-0 flex items-center justify-center">
+      <div className="text-center">
+        <div className="text-8xl mb-2">☘️</div>
+        <div className="text-6xl">🎂</div>
+      </div>
+    </div>
+  ),
+};
 
 export default function Gallery() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
@@ -26,25 +79,21 @@ export default function Gallery() {
           {galleryItems.map((item, index) => (
             <div
               key={item.id}
-              className="group relative aspect-square overflow-hidden rounded-2xl bg-cream-100 cursor-pointer shadow-md hover:shadow-2xl transition-shadow duration-300"
+              className="group relative aspect-square overflow-hidden rounded-2xl cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300 animate-fade-in"
               style={{
                 animationDelay: `${index * 100}ms`,
               }}
               onMouseEnter={() => setHoveredId(item.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
-              {/* Image */}
-              <div className={`absolute inset-0 transition-transform duration-500 ease-out ${
+              {/* Gradient background matching product colors */}
+              <div className={`absolute inset-0 ${gradientStyles[item.id] || 'bg-cream-200'} transition-transform duration-500 ease-out ${
                 hoveredId === item.id ? 'scale-110' : 'scale-100'
               }`}>
-                <Image
-                  src={item.image}
-                  alt={item.alt}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover"
-                  priority={index < 3}
-                />
+                {/* Decorative elements */}
+                <div className={`transition-opacity duration-300 ${hoveredId === item.id ? 'opacity-40' : 'opacity-70'}`}>
+                  {decorativeElements[item.id]}
+                </div>
               </div>
 
               {/* Overlay with caption */}
@@ -54,8 +103,11 @@ export default function Gallery() {
                            ${hoveredId === item.id ? 'opacity-100' : 'opacity-0'}`}
               >
                 <div className="p-6 w-full">
-                  <p className="text-white font-display text-xl md:text-2xl">
+                  <p className="text-white font-display text-xl md:text-2xl mb-2">
                     {item.caption}
+                  </p>
+                  <p className="text-cream-100 text-sm">
+                    {item.alt}
                   </p>
                 </div>
               </div>

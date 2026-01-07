@@ -6,12 +6,22 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left: Image placeholder */}
             <div className="order-2 md:order-1">
-              <div className="aspect-square rounded-3xl bg-gradient-to-br from-warm-200 to-cream-300 flex items-center justify-center shadow-2xl">
-                <div className="text-center p-8">
-                  <div className="text-8xl mb-4">👩‍🍳</div>
-                  <p className="text-sm text-cocoa-600 font-medium">
-                    Your photo here
-                  </p>
+              <div className="aspect-square rounded-3xl bg-gradient-to-br from-warm-200 via-pink-100 to-cream-300 flex items-center justify-center shadow-2xl overflow-hidden relative group">
+                {/* Decorative elements */}
+                <div className="absolute top-4 right-4 text-6xl opacity-20 group-hover:opacity-30 transition-opacity">🎂</div>
+                <div className="absolute bottom-8 left-6 text-5xl opacity-20 group-hover:opacity-30 transition-opacity">🍓</div>
+                <div className="absolute top-1/3 left-8 text-4xl opacity-20 group-hover:opacity-30 transition-opacity">✨</div>
+
+                <div className="text-center p-8 relative z-10">
+                  <div className="text-8xl mb-4 animate-pulse">👩‍🍳</div>
+                  <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+                    <p className="text-sm text-cocoa-800 font-semibold mb-1">
+                      Meet the Baker
+                    </p>
+                    <p className="text-xs text-cocoa-600">
+                      Passionate about creating joy, one jar at a time
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
