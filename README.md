@@ -12,16 +12,21 @@ A beautiful, mobile-first e-commerce web application for a boutique cake jar bus
 - **About Section** — Share the baker's story and craftsmanship
 - **Social Integration** — Footer with social media links and contact info
 
-## 🎨 Current Visual Design
+## 🎂 Current Product Offerings
 
-The gallery currently uses **intentionally designed gradient placeholders** that match the actual colors of your cake jar photos:
-- Strawberry Red Velvet: Soft pink and red gradients
-- Variety Collection: Multi-color festive gradient
-- Chocolate Cookie: Warm brown and amber tones
-- Strawberry Sprinkle: Festive pink and yellow
-- Mint Shamrock: Fresh green gradient
+**Flavors:**
+- 🍓 **Strawberry Crunch** — Fluffy vanilla cake with fresh strawberries, whipped cream, and crunchy topping
+- 🍪 **Oreo** — Rich chocolate cake with Oreo cookie pieces and creamy vanilla frosting
+- 🍫 **Twix Delight** — Chocolate cake with caramel layers, shortbread pieces, and chocolate drizzle
+- 🔥 **S'mores** — Graham cracker cake with marshmallow cream and chocolate ganache
 
-**The site looks professional and ready to deploy RIGHT NOW!** You can swap to real photos anytime later using the guide in `QUICK_IMAGE_SWAP.md`.
+**Sizes & Prices:**
+- Small (8oz) — $10 | Perfect for 1-2 servings
+- Medium (12oz) — $15 | Great for 2-3 servings
+- Large (16oz) — $25 | Perfect for 4-6 servings
+
+**Gallery Design:**
+The gallery uses beautiful gradient placeholders matching each flavor's colors. **The site looks professional and ready to deploy RIGHT NOW!**
 
 ## 🛠️ Tech Stack
 
@@ -109,15 +114,14 @@ npm start
 
 ### Before Launch
 
-#### 1. **Add Your Cake Jar Photos**
-You have 5 beautiful photos ready to go! Place them in `/public/images/gallery/`:
-- `strawberry-red-velvet.jpg` - Your gorgeous strawberry-topped jars
-- `variety-collection.jpg` - The colorful dome container collection
-- `chocolate-cookie-crumble.jpg` - Cookie crumble chocolate jars
-- `strawberry-sprinkle-trio.jpg` - Strawberry and sprinkle trio
-- `mint-shamrock-pair.jpg` - Mint jars with shamrock decorations
+#### 1. **Add Your Cake Jar Photos (Optional)**
+The site currently has beautiful gradient placeholders. When ready to add photos, place them in `/public/images/gallery/`:
+- `strawberry-crunch.jpg` - Strawberry crunch jars
+- `oreo.jpg` - Oreo cake jar photos
+- `twix-delight.jpg` - Twix delight jars
+- `smores.jpg` - S'mores cake jars
 
-**See `IMAGE_UPLOAD_GUIDE.md` for detailed instructions on which photo goes where!**
+**The gradients look great, but real photos can be swapped in anytime!**
 
 #### 2. **Update Content**
 - Customize baker's name in `src/components/About.tsx`

@@ -5,53 +5,42 @@ import { galleryItems } from '@/lib/data';
 
 // Beautiful gradient placeholders matching the actual product colors
 const gradientStyles: Record<string, string> = {
-  '1': 'bg-gradient-to-br from-red-200 via-pink-100 to-red-300', // Strawberry red velvet
-  '2': 'bg-gradient-to-br from-yellow-100 via-green-200 to-pink-200', // Variety collection
-  '3': 'bg-gradient-to-br from-amber-200 via-brown-300 to-stone-400', // Chocolate cookie
-  '4': 'bg-gradient-to-br from-pink-200 via-yellow-100 to-red-200', // Strawberry sprinkle
-  '5': 'bg-gradient-to-br from-green-200 via-emerald-300 to-green-100', // Mint shamrock
+  '1': 'bg-gradient-to-br from-pink-300 via-red-200 to-pink-400', // Strawberry Crunch
+  '2': 'bg-gradient-to-br from-gray-800 via-gray-600 to-gray-900', // Oreo
+  '3': 'bg-gradient-to-br from-amber-400 via-yellow-600 to-amber-700', // Twix Delight
+  '4': 'bg-gradient-to-br from-amber-200 via-yellow-700 to-orange-600', // S'mores
 };
 
 const decorativeElements: Record<string, JSX.Element> = {
   '1': (
     <div className="absolute inset-0 flex items-center justify-center">
       <div className="text-center">
-        <div className="text-8xl mb-2">🍓</div>
-        <div className="text-6xl">🎂</div>
+        <div className="text-9xl mb-2">🍓</div>
+        <div className="text-7xl">✨</div>
       </div>
     </div>
   ),
   '2': (
     <div className="absolute inset-0 flex items-center justify-center">
-      <div className="grid grid-cols-2 gap-4 text-6xl">
-        <div>🍰</div>
-        <div>🎂</div>
-        <div>🧁</div>
-        <div>🍪</div>
+      <div className="text-center">
+        <div className="text-9xl mb-2 filter drop-shadow-lg">🍪</div>
+        <div className="text-7xl">🖤</div>
       </div>
     </div>
   ),
   '3': (
     <div className="absolute inset-0 flex items-center justify-center">
       <div className="text-center">
-        <div className="text-8xl mb-2">🍫</div>
-        <div className="text-6xl">🍪</div>
+        <div className="text-9xl mb-2">🍫</div>
+        <div className="text-7xl">🍬</div>
       </div>
     </div>
   ),
   '4': (
     <div className="absolute inset-0 flex items-center justify-center">
       <div className="text-center">
-        <div className="text-8xl mb-2">🍓</div>
-        <div className="text-6xl">🎉</div>
-      </div>
-    </div>
-  ),
-  '5': (
-    <div className="absolute inset-0 flex items-center justify-center">
-      <div className="text-center">
-        <div className="text-8xl mb-2">☘️</div>
-        <div className="text-6xl">🎂</div>
+        <div className="text-9xl mb-2">🔥</div>
+        <div className="text-7xl">🍫</div>
       </div>
     </div>
   ),
@@ -75,7 +64,7 @@ export default function Gallery() {
         </div>
 
         {/* Gallery grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {galleryItems.map((item, index) => (
             <div
               key={item.id}

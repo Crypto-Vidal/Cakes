@@ -99,19 +99,19 @@ export default function OrderFlow() {
             <h3 className="text-2xl font-display font-semibold text-cocoa-900 mb-6 text-center">
               Step 2: Choose Your Flavor
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {flavors.map((flavor) => (
                 <button
                   key={flavor.id}
                   onClick={() => setSelectedFlavor(flavor.id)}
-                  className={`card p-5 text-left transition-all duration-300 ${
+                  className={`card p-6 text-left transition-all duration-300 ${
                     selectedFlavor === flavor.id
-                      ? 'ring-4 ring-cocoa-500'
-                      : 'hover:shadow-lg'
+                      ? 'ring-4 ring-cocoa-500 scale-105'
+                      : 'hover:shadow-lg hover:scale-102'
                   }`}
                 >
-                  <div className="flex items-start justify-between mb-2">
-                    <h4 className="font-semibold text-lg text-cocoa-900">
+                  <div className="flex items-start justify-between mb-3">
+                    <h4 className="font-display font-bold text-xl text-cocoa-900">
                       {flavor.name}
                     </h4>
                     {selectedFlavor === flavor.id && (
