@@ -29,9 +29,9 @@ export const cakeJarSizes: CakeJarSize[] = [
 
 export const flavors: Flavor[] = [
   {
-    id: 'vanilla-dream',
-    name: 'Vanilla Dream',
-    description: 'Classic Madagascar vanilla with silky buttercream',
+    id: 'strawberry-shortcake',
+    name: 'Strawberry Shortcake',
+    description: 'Fluffy vanilla cake with fresh strawberries and whipped cream',
   },
   {
     id: 'chocolate-velvet',
@@ -44,57 +44,51 @@ export const flavors: Flavor[] = [
     description: 'Velvety cocoa cake with cream cheese frosting',
   },
   {
-    id: 'lemon-bliss',
-    name: 'Lemon Bliss',
-    description: 'Fresh lemon cake with tangy lemon curd',
-  },
-  {
-    id: 'salted-caramel',
-    name: 'Salted Caramel',
-    description: 'Brown butter cake with homemade salted caramel',
-  },
-  {
     id: 'cookies-cream',
     name: 'Cookies & Cream',
     description: 'Chocolate cake layered with crushed cookies and cream',
+  },
+  {
+    id: 'vanilla-funfetti',
+    name: 'Vanilla Funfetti',
+    description: 'Classic vanilla cake with colorful sprinkles and buttercream',
+  },
+  {
+    id: 'mint-shamrock',
+    name: 'Mint Shamrock',
+    description: 'Refreshing mint cake with creamy frosting (seasonal)',
   },
 ];
 
 export const galleryItems: GalleryItem[] = [
   {
     id: '1',
-    image: '/images/gallery/placeholder-1.jpg',
-    alt: 'Layered cake jar with visible chocolate and vanilla layers',
-    caption: 'Handcrafted layers',
+    image: '/images/gallery/strawberry-red-velvet.jpg',
+    alt: 'Five beautiful red velvet cake jars topped with whipped cream and fresh strawberries',
+    caption: 'Strawberry perfection',
   },
   {
     id: '2',
-    image: '/images/gallery/placeholder-2.jpg',
-    alt: 'Collection of colorful cake jars',
+    image: '/images/gallery/variety-collection.jpg',
+    alt: 'Colorful collection of cake jars featuring vanilla, chocolate, mint, and strawberry flavors',
     caption: 'Every jar tells a story',
   },
   {
     id: '3',
-    image: '/images/gallery/placeholder-3.jpg',
-    alt: 'Close-up of red velvet cake jar',
-    caption: 'Made with love',
+    image: '/images/gallery/chocolate-cookie-crumble.jpg',
+    alt: 'Three chocolate cake jars with layers of cream and cookie crumble topping',
+    caption: 'Cookies & cream delight',
   },
   {
     id: '4',
-    image: '/images/gallery/placeholder-4.jpg',
-    alt: 'Cake jar with fresh berries on top',
-    caption: 'Fresh ingredients',
+    image: '/images/gallery/strawberry-sprinkle-trio.jpg',
+    alt: 'Trio of cake jars with strawberry and colorful sprinkle toppings',
+    caption: 'Fresh & festive',
   },
   {
     id: '5',
-    image: '/images/gallery/placeholder-5.jpg',
-    alt: 'Elegant presentation of cake jars',
-    caption: 'Perfect for any occasion',
-  },
-  {
-    id: '6',
-    image: '/images/gallery/placeholder-6.jpg',
-    alt: 'Seasonal cake jar flavors',
+    image: '/images/gallery/mint-shamrock-pair.jpg',
+    alt: 'Two mint-flavored cake jars decorated with green shamrock sprinkles',
     caption: 'Seasonal specialties',
   },
 ];

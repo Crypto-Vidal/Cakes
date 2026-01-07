@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { galleryItems } from '@/lib/data';
 
 export default function Gallery() {
@@ -25,21 +26,25 @@ export default function Gallery() {
           {galleryItems.map((item, index) => (
             <div
               key={item.id}
-              className="group relative aspect-square overflow-hidden rounded-2xl bg-cream-100 cursor-pointer"
+              className="group relative aspect-square overflow-hidden rounded-2xl bg-cream-100 cursor-pointer shadow-md hover:shadow-2xl transition-shadow duration-300"
               style={{
                 animationDelay: `${index * 100}ms`,
               }}
               onMouseEnter={() => setHoveredId(item.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
-              {/* Placeholder for actual images */}
-              <div className="absolute inset-0 bg-gradient-to-br from-warm-200 to-cream-300 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="text-6xl mb-4">🎂</div>
-                  <p className="text-sm text-cocoa-600 font-medium">
-                    {item.alt}
-                  </p>
-                </div>
+              {/* Image */}
+              <div className={`absolute inset-0 transition-transform duration-500 ease-out ${
+                hoveredId === item.id ? 'scale-110' : 'scale-100'
+              }`}>
+                <Image
+                  src={item.image}
+                  alt={item.alt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
+                  priority={index < 3}
+                />
               </div>
 
               {/* Overlay with caption */}
@@ -54,12 +59,6 @@ export default function Gallery() {
                   </p>
                 </div>
               </div>
-
-              {/* Hover scale effect */}
-              <div
-                className={`absolute inset-0 transition-transform duration-500 ease-out
-                           ${hoveredId === item.id ? 'scale-110' : 'scale-100'}`}
-              />
             </div>
           ))}
         </div>

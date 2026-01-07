@@ -97,11 +97,29 @@ npm start
 ## 🔄 Next Steps
 
 ### Before Launch
-1. **Add Real Images** — Replace placeholder images in `/public/images/gallery/`
-2. **Update Content** — Customize baker's name, story, and contact info
-3. **Configure Payment** — Integrate Stripe for checkout functionality
-4. **Set up Analytics** — Add Google Analytics or similar
-5. **SEO Optimization** — Update metadata and add Open Graph images
+
+#### 1. **Add Your Cake Jar Photos**
+You have 5 beautiful photos ready to go! Place them in `/public/images/gallery/`:
+- `strawberry-red-velvet.jpg` - Your gorgeous strawberry-topped jars
+- `variety-collection.jpg` - The colorful dome container collection
+- `chocolate-cookie-crumble.jpg` - Cookie crumble chocolate jars
+- `strawberry-sprinkle-trio.jpg` - Strawberry and sprinkle trio
+- `mint-shamrock-pair.jpg` - Mint jars with shamrock decorations
+
+**See `IMAGE_UPLOAD_GUIDE.md` for detailed instructions on which photo goes where!**
+
+#### 2. **Update Content**
+- Customize baker's name in `src/components/About.tsx`
+- Update story and bio in About section
+- Add contact info in `src/components/Footer.tsx`
+
+#### 3. **Configure Payment**
+- Integrate Stripe for checkout functionality
+- Update checkout flow in `src/components/Cart.tsx`
+
+#### 4. **Additional Setup**
+- Set up Analytics (Google Analytics or similar)
+- SEO Optimization — Update metadata and add Open Graph images
 
 ### Feature Enhancements
 - [ ] Add seasonal flavor rotations
